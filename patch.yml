@@ -1,0 +1,14 @@
+--- 
+- 
+  hosts: all
+  sudo: true
+  tasks: 
+    - 
+      name: ".rpm upgrade server"
+      when: "ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'\n"
+      yum: "update_cache=yes name=* state=latest update_cache=yes\n"
+    - 
+      apt: "update_cache=yes cache_valid_time=1200 upgrade=dist\n"
+      name: ".deb do dist-upgrade"
+      when: "ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'"
+
