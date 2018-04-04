@@ -14,4 +14,4 @@
     - 
       name: "Suse update"
       when: "ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'"
-      zypper: "update_cache=yes name=* state=latest type=patch\n"
+      zypper: "name=* state=latest type=patch\n"
