@@ -11,4 +11,7 @@
       apt: "update_cache=yes cache_valid_time=1200 upgrade=dist\n"
       name: ".deb do dist-upgrade"
       when: "ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'"
-
+    - 
+      name: "Suse update"
+      when: "ansible_distribution == 'SUSE' or ansible_distribution == 'SLES'"
+      zypper: "update_cache=yes name=* state=latest type=patch\n"
