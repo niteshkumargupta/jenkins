@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: nkg
+  hosts: all
   sudo: true
   tasks: 
     - 
