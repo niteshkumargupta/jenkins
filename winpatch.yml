@@ -1,0 +1,22 @@
+--- 
+- 
+  gather_facts: true
+  hosts: windows
+  name: "Windows Update"
+  remote_user: administrator
+  tasks: 
+    - 
+      name: "Running Windows Update"
+      register: result
+      win_updates: 
+        category_names: 
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+          - Updates
+          - DefinitionUpdates
+    - 
+      debug: var=result
+    - 
+      when: result.reboot_required
+      win_reboot: ~
