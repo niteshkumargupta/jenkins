@@ -14,7 +14,7 @@ pipeline
         }
         stage('Patching') {
             steps {
-                ansiblePlaybook become: true, credentialsId: 'patch', disableHostKeyChecking: true, installation: 'ansible 2.4.2.0', inventory: 'inventory.ini',limit: 'suse', playbook: 'patch.yml'
+                ansiblePlaybook become: true, credentialsId: 'patch', disableHostKeyChecking: true, installation: 'ansible 2.4.2.0', inventory: 'inventory.ini',limit: 'ubuntu', playbook: 'patch.yml'
 
             }
         }
