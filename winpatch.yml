@@ -1,7 +1,7 @@
 --- 
 - 
   gather_facts: true
-  hosts: windows
+  hosts: all
   name: "Windows Update"
   remote_user: administrator
   tasks: 
