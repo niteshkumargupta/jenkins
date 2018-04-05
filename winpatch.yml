@@ -19,4 +19,4 @@
       debug: var=result
     - 
       when: result.reboot_required
-      win_reboot: ~
+      win_reboot:
