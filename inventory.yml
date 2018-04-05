@@ -2,8 +2,8 @@ all:
  children:
    windows:
      hosts:
-       mywin: {ansible_host: "172.16.168.201"}
-       mywin2: {ansible_host: "172.16.168.148"}
+       "mywin": {ansible_host: "172.16.168.201"}
+       "mywin2": {ansible_host: "172.16.168.148"}
      vars:
        ansible_ssh_user: administrator
        ansible_ssh_pass: Passwd99@
@@ -12,5 +12,5 @@ all:
        ansible_winrm_server_cert_validation: ignore
    linux:
     hosts:
-     mylinux: {ansible_host: "172.16.168.112"}
-     mylinux2: {ansible_host: "172.16.168.113"}
+     "mylinux": {ansible_host: "172.16.168.112"}
+     "mylinux2": {ansible_host: "172.16.168.113"}
