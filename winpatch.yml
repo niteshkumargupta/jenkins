@@ -17,6 +17,5 @@
           - DefinitionUpdates
     - 
       debug: var=result
-    - 
+    - win_reboot: 
       when: result.reboot_required
-      win_reboot:
